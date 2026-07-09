@@ -1,0 +1,27 @@
+---
+const navItems = [
+  { label: 'Home', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Education', href: '#education' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+  <nav class="container mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#" class="text-xl font-bold text-accent">Fares Oyion</a>
+    <ul class="hidden md:flex gap-6 text-sm font-medium">
+      {navItems.map(item => (
+        <li>
+          <a href={item.href} class="hover:text-accent transition-colors">{item.label}</a>
+        </li>
+      ))}
+    </ul>
+    <button class="md:hidden text-light">
+      <!-- hamburger icon unchanged -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+</header>

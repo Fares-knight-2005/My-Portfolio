@@ -1,0 +1,18 @@
+﻿[
+    {
+        "title": "University Plan Project",
+        "description": "UniPlan is a comprehensive scheduling and academic planning solution designed to help university students optimize their semester schedules and make informed decisions about course enrollment. By leveraging data, UniPlan not only assists students in building the best possible schedule but also provides valuable insights to university administration regarding student demand for specific subjects.",
+        "image": "Public/images/uniplan.jpg",
+        "tech": [ "C#", ".NET Core 8", "SQL Server", "ADO.NET", "Clean Architecture", "React", "Rest Apis" ],
+        "github": "https://github.com/QFM-Company/UniPlan",
+        "demo": ""
+    },
+    {
+        "title": "Vehicles License Project",
+        "description": "Driving License and Vehicle Department (DVLD) Management System. A comprehensive desktop application designed to manage driving licenses, test appointments, and vehicle-related administrative tasks. Built using .NET Framework, this application follows a robust multi-layered architecture for scalability and maintainability.",
+        "image": "Public/images/vehicles.jpg",
+        "tech": [ ".NET Framework", "SQL Server", "ADO.NET", "WinForms", "3-Tier Architecture" ],
+        "github": "https://github.com/Fares-knight-2005/Vehicles-License-Project",
+        "demo": ""
+    }
+]

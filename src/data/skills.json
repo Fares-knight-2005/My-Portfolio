@@ -1,0 +1,8 @@
+[
+    { "name": ".Net Core" },
+    { "name": ".Net Framework Windows Forms" },
+    { "name": "SQL Server" },
+    { "name": "Git" },
+    { "name": "ADO.NET" },
+    { "name": "REST APIs" }
+]
