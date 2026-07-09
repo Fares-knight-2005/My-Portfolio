@@ -1,6 +1,7 @@
 ---
 import projects from '../data/projects.json';
-import { getAssetPath } from '../utils/path.js';
+
+const base = import.meta.env.BASE_URL || '/';
 ---
 
 <section id="projects" class="py-20">
@@ -8,7 +9,7 @@ import { getAssetPath } from '../utils/path.js';
     <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Projects</h2>
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       {projects.map((project, i) => {
-        const imgSrc = getAssetPath(project.image);
+        const imgSrc = `${base}${project.image.replace(/^\//, '')}`;
         return (
           <div
             class="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent/50 transition group"

@@ -1,6 +1,8 @@
 ---
 import personal from '../data/personal.json';
-import { getAssetPath } from '../utils/path.js';
+
+const base = import.meta.env.BASE_URL || '/';
+const avatarSrc = `${base}${personal.avatar.replace(/^\//, '')}`;
 ---
 
 <section id="about" class="py-20">
@@ -13,7 +15,7 @@ import { getAssetPath } from '../utils/path.js';
         I believe clean, maintainable code is the foundation of any successful system. Outside of the screen, I enjoy contributing to open-source projects and sharing knowledge.
       </p>
       <img
-        src={getAssetPath(personal.avatar)}
+        src={avatarSrc}
         alt={personal.name}
         class="w-80 h-80 md:w-96 md:h-96 rounded-2xl object-cover shadow-xl"
       />
