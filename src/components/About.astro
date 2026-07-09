@@ -1,5 +1,6 @@
 ---
 import personal from '../data/personal.json';
+const avatarSrc = import.meta.env.BASE_URL + personal.avatar.replace(/^\//, '');
 ---
 
 <section id="about" class="py-20">
@@ -12,7 +13,7 @@ import personal from '../data/personal.json';
         I Particepated in many ICPC Contests Got First Place On University Level Once.
       </p>
       <img
-        src={new URL(personal.avatar, import.meta.env.BASE_URL).pathname}
+                src={avatarSrc}
         alt={personal.name}
         class="w-64 h-64 rounded-2xl object-cover shadow-xl"
       />
