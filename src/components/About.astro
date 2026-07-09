@@ -12,7 +12,7 @@ import personal from '../data/personal.json';
         I Particepated in many ICPC Contests Got First Place On University Level Once.
       </p>
       <img
-        src={personal.avatar}
+        src={new URL(personal.avatar, import.meta.env.BASE_URL).pathname}
         alt={personal.name}
         class="w-64 h-64 rounded-2xl object-cover shadow-xl"
       />
