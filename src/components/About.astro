@@ -1,6 +1,6 @@
 ---
 import personal from '../data/personal.json';
-const avatarSrc = import.meta.env.BASE_URL + personal.avatar.replace(/^\//, '');
+import { getAssetPath } from '../utils/path.js';
 ---
 
 <section id="about" class="py-20">
@@ -10,12 +10,12 @@ const avatarSrc = import.meta.env.BASE_URL + personal.avatar.replace(/^\//, '');
       <p class="text-gray-400 leading-relaxed text-lg flex-1">
         {personal.bio}
         <br/><br/>
-        I Particepated in many ICPC Contests Got First Place On University Level Once.
+        I believe clean, maintainable code is the foundation of any successful system. Outside of the screen, I enjoy contributing to open-source projects and sharing knowledge.
       </p>
       <img
-                src={avatarSrc}
+        src={getAssetPath(personal.avatar)}
         alt={personal.name}
-        class="w-64 h-64 rounded-2xl object-cover shadow-xl"
+        class="w-80 h-80 md:w-96 md:h-96 rounded-2xl object-cover shadow-xl"
       />
     </div>
   </div>

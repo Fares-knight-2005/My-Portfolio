@@ -1,10 +1,10 @@
 ---
 import personal from '../data/personal.json';
 import TypewriterWrapper from './TypewriterWrapper.jsx';
+import { getAssetPath } from '../utils/path.js';
 
-// دمج المسار الأساسي مع مسار الصورة وملف السيرة (أزل أي شرطة مائلة من البداية)
-const avatarSrc = import.meta.env.BASE_URL + personal.avatar.replace(/^\//, '');
-const cvHref = import.meta.env.BASE_URL + personal.cv.replace(/^\//, '');
+const avatarSrc = getAssetPath(personal.avatar);
+const cvHref = getAssetPath(personal.cv);
 ---
 
 <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">

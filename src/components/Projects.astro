@@ -1,5 +1,6 @@
 ---
 import projects from '../data/projects.json';
+import { getAssetPath } from '../utils/path.js';
 ---
 
 <section id="projects" class="py-20">
@@ -7,15 +8,14 @@ import projects from '../data/projects.json';
     <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Projects</h2>
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
       {projects.map((project, i) => {
-        // نزيل أي شرطة مائلة أولى من مسار الصورة، ثم ندمجها مع BASE_URL
-        const imgSrc = import.meta.env.BASE_URL + project.image.replace(/^\//, '');
+        const imgSrc = getAssetPath(project.image);
         return (
           <div
             class="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent/50 transition group"
             data-aos="fade-up"
             data-aos-delay={i * 150}
           >
-            <img 
+            <img
               src={imgSrc}
               alt={project.title}
               class="w-full h-48 object-cover"
@@ -24,7 +24,9 @@ import projects from '../data/projects.json';
               <h3 class="text-xl font-semibold mb-2">{project.title}</h3>
               <p class="text-gray-400 text-sm mb-4">{project.description}</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                {project.tech.map(t => <span class="text-xs bg-accent/20 text-accent px-2 py-1 rounded">{t}</span>)}
+                {project.tech.map(t => (
+                  <span class="text-xs bg-accent/20 text-accent px-2 py-1 rounded">{t}</span>
+                ))}
               </div>
               <div class="flex gap-3">
                 <a href={project.github} target="_blank" class="text-sm text-accent hover:underline">GitHub ↗</a>
