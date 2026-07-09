@@ -2,11 +2,11 @@
     "name": "Fares Oyion",
     "title": "Backend Developer",
     "bio": "Backend developer with hands-on experience building scalable systems using .NET Core and SQL Server. I've designed 3 layered architectures And Clean Architecture For Many Projects focusing on clean code, security, and performance. Passionate about solving complex problems through well-structured backend solutions and continuously expanding my skills into frontend development to deliver complete, user-friendly systems.",
-    "avatar": "Public/images/avatar.png",
+    "avatar": "/My_Portfolio/images/avatar.png",
     "email": "fares.oyion123@gmail.com",
     "social": {
         "github": "https://github.com/Fares-knight-2005",
         "linkedin": "https://linkedin.com/in/fares-oyion-563b57384"
     },
-    "cv": "Public/cv.pdf"
+    "cv": "/My_Portfolio/cv.pdf"
 }
