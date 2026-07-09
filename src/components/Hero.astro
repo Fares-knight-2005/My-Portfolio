@@ -2,10 +2,9 @@
 import personal from '../data/personal.json';
 import TypewriterWrapper from './TypewriterWrapper.jsx';
 
-// بناء المسار بشكل آمن
 const base = import.meta.env.BASE_URL || '/';
-const avatarSrc = `${base}${personal.avatar.replace(/^\//, '')}`;
-const cvHref = `${base}${personal.cv.replace(/^\//, '')}`;
+const avatarSrc = `${base}/${personal.avatar.replace(/^\//, '')}`;
+const cvHref = `${base}/${personal.cv.replace(/^\//, '')}`;
 ---
 
 <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">

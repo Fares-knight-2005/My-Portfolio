@@ -2,7 +2,7 @@
 import personal from '../data/personal.json';
 
 const base = import.meta.env.BASE_URL || '/';
-const avatarSrc = `${base}${personal.avatar.replace(/^\//, '')}`;
+const avatarSrc = `${base}/${personal.avatar.replace(/^\//, '')}`;
 ---
 
 <section id="about" class="py-20">
